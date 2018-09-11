@@ -1,0 +1,62 @@
+﻿@model web2.Models.clsConvertToBinary
+
+<!DOCTYPE html>
+@{
+    var binaryText = "";
+    var planText = "";
+    var bcClass = "";
+
+    if (Model != null)
+    {
+        binaryText = Model.Binary;
+        planText = Model.text;
+        bcClass = Model.animate;
+    }
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Content/TextToHexStyle.css" />
+    <title>Binary Converter</title>
+</head>
+<body style="overflow:hidden;">
+    <div class="bc @bcClass" id="bc">
+
+        <div class="showIt @bcClass">
+            <div class="row myHead ">
+                <div class="col-md-12 "></div>
+            </div>
+            @using (@Html.BeginForm("ToBinary", "TextToHex"))
+            {
+                <div class="row myBody">
+                    <div class="col-md-6 tAreas">
+                        <fieldset>
+                            <legend style="width:30px;">Text</legend>
+                            <textarea class="myForm" id="myText" name="myText">@planText</textarea>
+                        </fieldset>
+                    </div>
+
+                    <div class="col-md-6 tAreas">
+                        <fieldset>
+                            <legend style="width:45px;">Binary</legend>
+                            <textarea class="myForm" id="myBinary" name="myBinary">@binaryText</textarea>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="btnPos">
+                            <button class="btns" name="submit" id="submit" value="to Binary">To Binary</button>
+                            <button class="btns" name="submit" id="submit" value="to Text">To Text</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <script src="~/Scripts/BinaryConverter.js"></script>
+</body>
+</html>

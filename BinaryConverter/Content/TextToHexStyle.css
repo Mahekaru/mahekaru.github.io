@@ -1,0 +1,139 @@
+﻿
+
+
+
+.myHead {
+    margin-bottom: 20px;
+}
+
+
+.stickToBottom {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    margin-left: 0;
+    margin-right: 0;
+    bottom: 0;
+}
+
+fieldset {
+    position: static;
+    width: 100%;
+    padding: 0,2px,0,2px;
+    /*padding-top: 0;
+    padding-right: 2px;
+    padding-bottom: 0;
+    padding-left: 2px;*/
+    margin: 0 2px;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+}
+
+legend {
+    font-size: 15px;
+    color: white;
+    margin: 0;
+    border-bottom: 0;
+}
+
+.row {
+    margin-right: -10px;
+    color: white;
+}
+
+textarea:focus {
+    outline-color: black;
+}
+
+.myForm {
+    width: 100%;
+    height: 170px;
+    max-width: none;
+    resize: None;
+    background: none;
+    border-style: none;
+    color: white;
+}
+
+.btns {
+    position: relative;
+    width: 63px;
+    height: auto;
+    border: .02px;
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 12px;
+    border-style: solid;
+    border-color: white;
+    background: none;
+    color: white;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    display: inline;
+}
+
+.btnPos {
+    position: relative;
+    padding-left: 40.8%;
+    padding-right: 10%;
+    /*padding-left:50px;
+    padding-right:15px;*/
+}
+
+.tAreas {
+    padding-left: 0;
+    padding-right: 2px
+}
+
+body {
+    background-color: black;
+}
+
+.myBody {
+    margin: auto
+}
+
+.showIt {
+    visibility: hidden;
+}
+
+.bc {
+    position: relative;
+    width: 60%;
+    height: 30%;
+    margin: auto;
+    margin-top: 15px;
+    border: 1px;
+    border-style: solid;
+    border-color: gray;
+    background-color: black;
+}
+
+.showMe {
+    visibility: visible;
+}
+
+.animate {
+    animation-name: example;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+}
+
+@keyframes example {
+    0% {
+        background-color: black;
+        left: 0;
+        height: 0px;
+        width: 2px;
+        top: 2000px;
+    }
+
+    75% {
+        top: 0;
+        height: 240px;
+        width: 2px;
+    }
+}
